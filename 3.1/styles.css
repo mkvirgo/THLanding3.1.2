@@ -1,0 +1,116 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Make the text white to enhance the glow effect */
+    background-color: #000;
+    position: relative;
+}
+
+/* Apply glow effect to all text */
+h1, h2, h3, p, a, div, span {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.6), 
+                 0 0 30px rgba(255, 255, 255, 0.4);
+    color: #ffffff; /* Ensure all text is white */
+}
+
+/* Video background container */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+}
+
+video {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay content styling */
+.overlay-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+}
+
+/* Artist information positioned in front of the video backgrounds */
+.artist-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 2;
+}
+
+.artist {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Spotify embed styling */
+.spotify-embed {
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 200px;
+}
+
+.spotify-embed iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Instagram link styling */
+.instagram-link {
+    margin-top: 10px;
+}
+
+/* Responsive Media Queries */
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    .artist-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artist {
+        width: 100%;
+    }
+
+    .spotify-embed {
+        height: 150px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .artist {
+        width: 45%;
+    }
+
+    .spotify-embed {
+        height: 180px;
+    }
+}
